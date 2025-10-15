@@ -1,0 +1,43 @@
+Form Validation:
+
+Design:
+
+Name:
+
+Age:
+
+Family Income
+
+Password:
+
+Re-Enter Password:
+
+Mobile Number
+
+Roll No
+
+Submit
+
+Code:
+
+protected void Button1 Click(object sender, EventArgs e)
+{
+if(IPage.IsValid) return;
+Label1.Text = "Registration is Successfull";
+}
+ protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs
+args)
+{
+intx= int.Parse(args.Value);
+if(x% 2 == 0)
+{ 
+  args.IsValid = true;
+}
+else
+{
+args.IsValid false;
+}
+}
+
+
+
