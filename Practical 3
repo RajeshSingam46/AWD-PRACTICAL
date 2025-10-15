@@ -1,0 +1,44 @@
+Create a simple web page with various server controls to demonstrate setting and use of their properties.
+(Example: AutoPostBack)
+
+Code:
+protected void Name TextChanged(object sender, EventArgs e)
+{
+    String str;
+    str Name.Text;
+    Label2.Text str;
+}
+protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+{
+     Label3.Text DropDownList1.SelectedValue;
+}
+protected void CheckBoxList1 SelectedIndexChanged(object sender, EventArgs e)
+{
+     Label4.Text";
+    foreach (ListItem x in CheckBoxList1.Items)
+   {
+      if (x.Selected)
+      {
+           Label4.Text + "<br>"x.Value;
+        }
+    }
+}
+protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e) 
+{
+    Label5. Text="";
+    foreach (ListItem x in ListBox1.Items) (
+   {
+   if (x.Selected)
+   {
+        Labe15.Text .Value;
+     }
+  }
+}
+protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e) 
+{
+    Label6.Text RadioButtontist1.SelectedValue;
+}
+protected void Button1 Click(object sender, EventArgs e)
+{
+Label7.Text "Record Submitted";
+}
