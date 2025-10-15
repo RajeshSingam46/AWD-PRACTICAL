@@ -1,0 +1,24 @@
+Practical 2: Working with basic C# and ASP.NET
+a) Create a simple application to demonstrate the concepts boxing and unboxing
+
+Code : 
+private void Button_Click(object sender, RoutedEventArgs e) {
+ int valueType = Convert.ToInt32(NumberTxt.Text);
+ object boxed = valueType; //The value type 'valueType' is boxed
+ Label1.Content = "Boxed value: " + boxed;
+ int unboxed = (int)boxed;
+ Label2.Content = "Unboxed value: " + unboxed;
+ }
+---------------------------------------------------------------------
+
+b) Create a simple application to perform addition and subtraction using delegate.
+
+Code : 
+private void Button_Click(object sender, RoutedEventArgs e) {
+ int x = Convert.ToInt32(NumberTxt1.Text);
+ int y = Convert.ToInt32(NumberTxt2.Text);
+ MathOperation add = new MathOperation(Add);
+ MathOperation sub = new MathOperation(Sub);
+ Label1.Content = add(x, y).ToString();
+ Label2.Content = sub(x, y).ToString();
+ }
