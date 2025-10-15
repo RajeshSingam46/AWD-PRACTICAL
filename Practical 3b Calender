@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using Systen. Ling;
+using System.Web
+using System.Web.UI
+using System.Web.UI.WebControls;
+namespace Calendarfinal
+{
+    public partial class for System.eb.UI.Page
+    {
+       protected void Page Load(object sender, EventArgs e)
+       {
+       }
+       protected void Calendar, DeyRender(object sender, laylanderEventArgs e)
+       {
+           if (e. Day. Date. Day5e.Day. Date. Month // Teachers Day
+           {
+           e.Cell.BackColor Systee. Drawing Color. Yellow;
+           Label lbl. Text Teachers Day;
+           e.Cell.Controls.Add(lbl);
+          Image gl new Image();
+          gl. Inageürlto.jpg";
+          gl. Height 20;
+          gl.width 20;
+          Cell.Controls.Add(gl);
+          }
+          if (e. Day. Date. Day 216.Day. Date. Ronth 10) // Diwali Start
+         {   
+         Calendarl SelectedDate new DateTime(2822, 10, 23);
+         Calendari SelectedDates SelectRange(Calendari SelectedDate, Calendarl. Selected
+Date. AddDays(5));  
+          Label lbli new Label();
+          lbl1.Text<br>Diwali";
+          e.Cell.Controls.Add(lbl1);
+      }
+ }  
+protected void Calendari SelectionChanged(object sender, EventArgs e)
+{
+   Labell Text "Your Selected Date: Calendari. SelectedDate. Date.Tastring);
+}
+protected void Buttont Click(object sender, EventArgs e)
+      Calendarl Caption "Zahid Sayyed";
+      Calendari FirstDayOfWeek FirstDayOfWeek. Sunday,
+      Calendari NextPrevForsat RextPrevFormat.FullMonth;
+      Calendari. TitleFormat TitleFormat. Month;
+
+      Labe12. Text "Todays Date: Calendarl.SelectedDate.ToString();
+      Label3. Text "Diwali Vacation Start: 18-23-2022";
+
+      TimeSpan d new Dateline (2022, 10, 23) Calendari. TodaysDate; "Days Remaining For Diwali Vacation: d.Days.ToString(); Labelu. Text
+      TimeSpan di new DateTime (2922, 12, 31) Calendarl. Todays Date; Label5. Text "Days Remaining for New Year: d1.Days.ToString();
+
+      if (Calendari SelectedDate.ToString("MM-dd-yyyy") "10-23-2922")
+      {
+          Label3. Text <b>Diwali Festival Start</b>*;
+      }
+      if (Calendari.SelectedDate.ToString("MM-dd-yyyy") "10-26-2622")
+      [
+          Label3. Text <b>Diwali Festival End</b>";
+    }
+}    
+protected void Button2 Click(object sender, EventArgs e)
+{
+Label1.Text="";
+Label2. Text="";
+Label3.Text="";
+Label4.Text"="";
+Label5. Text="";
+Calendarl.SelectedDates.Clear();
+}
+}
