@@ -1,0 +1,74 @@
+a) Create an application to print on screen the output of adding, subtracting, multiplying and dividing two 
+numbers entered by the user in C#.
+
+Code : 
+private void Button_Click(object sender, RoutedEventArgs e){
+ try {
+ double number1 = Convert.ToDouble(txtNumber1.Text);
+ double number2 = Convert.ToDouble(txtNumber2.Text);
+ double addition = number1 + number2;
+ double subtraction = number1 - number2;
+ double multiplication = number1 * number2;
+ double division = number2 != 0 ? number1 / number2 : double.NaN; // Check division by 0 
+ txtAddition.Text = addition.ToString();
+ txtSubtraction.Text = subtraction.ToString();
+ txtMultiplication.Text = multiplication.ToString();
+ txtDivision.Text = division != double.NaN ? division.ToString() : "Error"; // Handle division by zero
+ } catch(Exception ex) {
+ MessageBox.Show("Invalid input! Please enter valid numbers.");
+ } 
+}
+-----------------------------------------------------------------------
+
+b) Create an application to print Floyd’s triangle till n rows in C#.
+
+Code :
+private void Button_Click(object sender, RoutedEventArgs e) {
+ int numOfRows = Convert.ToInt32(NoOfRows.Text);
+ int number = 1;
+ StringBuilder sb = new StringBuilder();
+ for(int i=1; i<=numOfRows; i++) {
+ for (int j=1; j<=i; j++) {
+ sb.Append(number + " ");
+ number++;
+ } sb.Append("\n");
+ } Lawaris.Text = sb.ToString();
+ } 
+ }
+------------------------------------------------------------------------
+
+c) Create an application to demonstrate following operations 
+i) Generate Fibonacci series.
+ii) Test for Prime numbers.
+
+Code :
+private void FibonacciSeries(object sender, RoutedEventArgs e) {
+ int a, b, c, i, n;
+ a = 1;
+ b = 1;
+ FiboSeries.Content = a.ToString() + b.ToString();
+ n = Convert.ToInt32(Number.Text);
+ for(i=2; i<n; i++) {
+ c = a + b;
+ FiboSeries.Content = FiboSeries.Content + c.ToString();
+ a = b;
+ b = c;
+ }
+ }
+ private void PrimeNumbers(object sender, RoutedEventArgs e){
+ int n, i, s = 0;
+ n = Convert.ToInt32(Number.Text);
+ if (n == 0 || n == 1)
+ s = 1;
+ for(i=2; i<=n/2; i++) {
+ if (n % i == 0) {
+ s = 1;
+break;
+ }
+ }
+ if (s == 0)
+ PrimeNo.Content = "The given number is Prime. ";
+ else
+ PrimeNo.Content = "The given number is not Prime. ";
+ }
+
